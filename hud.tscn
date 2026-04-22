@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bptiqqvc1d7lw"]
+
+[ext_resource type="Script" uid="uid://c64uw33cnmx63" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://bscx1p8esfyl2" path="res://VCR_OSD_MONO_1.001.ttf" id="2_8sq4i"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1645702300]
+script = ExtResource("1_64ctp")
+
+[node name="Dialogue" type="Label" parent="." unique_id=1595720272]
+offset_right = 526.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 32
+text = "This is a test piece of text"
+justification_flags = 131
+
+[node name="DialogueOptions" type="Label" parent="." unique_id=1663920847]
+offset_left = 19.0
+offset_top = 72.0
+offset_right = 59.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 32

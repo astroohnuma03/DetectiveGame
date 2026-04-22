@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dmoitvywkajle"]
+
+[ext_resource type="Script" uid="uid://d4juti368bgdc" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bo2upcaoy5txn" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bdtyicgbsq4xl" path="res://npc.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bptiqqvc1d7lw" path="res://hud.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cby7ilywr3nkn" path="res://npc_controller.tscn" id="5_lquwl"]
+
+[node name="Main" type="Node" unique_id=1552412857]
+script = ExtResource("1_0xm2m")
+
+[node name="Player" parent="." unique_id=760709827 instance=ExtResource("1_ig7tw")]
+position = Vector2(575, 343)
+collision_mask = 1
+
+[node name="HUD" parent="." unique_id=1645702300 instance=ExtResource("4_1bvp3")]
+
+[node name="NPC_Controller" parent="." unique_id=597785653 instance=ExtResource("5_lquwl")]
+npc_scene = ExtResource("3_h2yge")
+
+[connection signal="dialogue_choice" from="HUD" to="." method="_on_hud_dialogue_choice"]

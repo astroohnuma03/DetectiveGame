@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bdtyicgbsq4xl"]
+
+[ext_resource type="Texture2D" uid="uid://dufy688je0wl4" path="res://Art/totallyNotMan.png" id="1_ideak"]
+[ext_resource type="Script" uid="uid://di0kec0k4xsqc" path="res://npc.gd" id="1_xxcha"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxcha"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ideak")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kh24r"]
+radius = 44.0
+height = 134.0
+
+[node name="NPC" type="Area2D" unique_id=1116609794]
+script = ExtResource("1_xxcha")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1960751939]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_xxcha")
+animation = &"stand"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=248511877]
+shape = SubResource("CapsuleShape2D_kh24r")
