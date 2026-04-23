@@ -9,9 +9,9 @@ func show_text(text, responses):
 	$Dialogue.show()
 	hide_labels()
 	labels = []
-	var position_y = 70
+	var position_y = 100
 	for response in responses:
-		create_label(response, Vector2(19, position_y))
+		create_label(response, Vector2(0, position_y))
 		position_y += 30
 	show_labels()
 
